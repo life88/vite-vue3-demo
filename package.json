@@ -1,0 +1,54 @@
+{
+  "name": "vite-vue3-demo",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "start": "vite --host --port 5000",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint --fix --ext .ts,.vue src",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,vue}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@tanstack/vue-query": "^5.8.3",
+    "@unocss/reset": "^0.57.2",
+    "axios": "^1.6.1",
+    "element-plus": "^2.4.2",
+    "lodash-es": "^4.17.21",
+    "pinia": "^2.1.7",
+    "vue": "^3.3.4",
+    "vue-meta": "^3.0.0-alpha.10",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.1.55",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.1",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-vue": "^9.18.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.2",
+    "prettier": "^3.0.3",
+    "sass": "^1.69.5",
+    "unocss": "^0.57.2",
+    "unplugin-auto-import": "^0.16.7",
+    "unplugin-vue-components": "^0.25.2",
+    "vite": "^4.4.5",
+    "vue-eslint-parser": "^9.3.2"
+  }
+}
